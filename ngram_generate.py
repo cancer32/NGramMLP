@@ -32,13 +32,13 @@ if __name__ == '__main__':
 
     with torch.no_grad():
         for i in range(args.count):
-            out = '.' * (model.batch_size)
+            out = '.' * model.batch_size
             if args.start:
                 out = '.' * max((model.batch_size-len(args.start), 0)) + args.start
             out = [stoi[i] for i in out]
             idx = out[-model.batch_size:]
             while True:
-                probs = model(torch.tensor(idx).unsqueeze(dim=0)).softmax(dim=1)
+                probs = model(torch.tensor(idx)).softmax(dim=0)
                 pred = torch.multinomial(probs, 1, replacement=True, generator=g).item()
                 idx.append(pred)
                 out.append(pred)

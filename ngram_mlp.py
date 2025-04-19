@@ -36,5 +36,5 @@ class NGramMLPModel(nn.Module):
         )
 
     def forward(self, X):
-        emb = self.embedding(X).view(X.shape[0], -1)
+        emb = self.embedding(X).view(-1)
         return self.model(emb)
