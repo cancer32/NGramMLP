@@ -12,7 +12,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_path', required=True, type=str, help='Path to the dataset')
     parser.add_argument('--checkpoint_path', required=True, type=str, help='Path to save the model weights')
-    parser.add_argument('--batch', type=int, default=3, help='Batch size of consecutive character as input feature')
+    parser.add_argument('--batch', type=int, default=4, help='Batch size of consecutive character as input feature')
     parser.add_argument('--emb', type=int, default=2, help='Embedding size')
     parser.add_argument('--hid', type=int, default=100, help='Hidden layer perceptron size')
     parser.add_argument('--seed', type=int, default=random.randint(0, 999999), help='Random seed')

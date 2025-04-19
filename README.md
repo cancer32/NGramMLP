@@ -1,6 +1,6 @@
-# NgramMLP: Character-level Ngram MLP Model
+# NgramMLP: Character-level ngram neural network model implemented usin MLP
 
-NgramMLP is a character-level Ngram-based Multi layer neural network model that generates names using a probabilistic model. Unlike NGram model, This implements the Embedding feature vector for the vocabulary together with the multi layer architecture to train and generate sequences of characters. Also It splits the dataset into training, dev and test set to check how the model is performing
+NgramMLP is a character-level Ngram-based Multi layer neural network model that generates names using a probabilistic model. Unlike [NGram](https://github.com/cancer32/NGramMLP) model, This implements the Embedding feature vector for the vocabulary together with the multi layer architecture to train and generate sequences of characters. Also It splits the dataset into training, dev and test set to check how the model is performing
 
 This project consists of two main scripts:
 
@@ -20,7 +20,7 @@ To use the Ngram model, you will need Python 3.x and several dependencies. It is
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/cancer32/NGram.git
+   git clone https://github.com/cancer32/NGramMLP.git
    cd NGram
    ```
 
@@ -36,13 +36,15 @@ To use the Ngram model, you will need Python 3.x and several dependencies. It is
 To train the model, run the `ngram_train.py` script with the required arguments.
 
 ```bash
-python ngram_train.py --dataset_path 'dataset/names.txt' --checkpoint_path 'weights/names.pt' [--n_gram <n>] [--seed <random_seed>] [--epochs <epochs>] [--lr <learning_rate>]
+python ngram_train.py --dataset_path 'dataset/names.txt' --checkpoint_path 'weights/names.pt' [--batch <n>] [--emb <n>] [--hid <n>] [--seed <random_seed>] [--epochs <epochs>] [--lr <learning_rate>]
 ```
 
 **Arguments:**
 - `--dataset_path`: The path to the text dataset for training (required).
 - `--checkpoint_path`: The directory to save the trained model weights (required).
-- `--n_gram`: The N-gram size (default is 4).
+- `--batch`: Batch size of consecutive character as input feature (default is 4).
+- `--emb`: Embedding size (default is 2).
+- `--hid`: Hidden layer perceptron count (default is 100).
 - `--seed`: Random seed for reproducibility (default is random).
 - `--epochs`: The number of epochs for training (default is 100).
 - `--lr`: The learning rate for training (default is 10).
