@@ -1,6 +1,6 @@
 # NgramMLP: Character-level ngram neural network model implemented usin MLP
 
-NgramMLP is a character-level Ngram-based Multi layer neural network model that generates names using a probabilistic model. Unlike [NGram](https://github.com/cancer32/NGramMLP) model, This implements the Embedding feature vector for the vocabulary together with the multi layer architecture to train and generate sequences of characters. Also It splits the dataset into training, dev and test set to check how the model is performing
+NgramMLP is a character-level Ngram-based Multi layer neural network model that generates names using a probabilistic model. Unlike [NGram](https://github.com/cancer32/NGram) model, This implements the Embedding feature vector for the vocabulary together with the multi layer architecture to train and generate sequences of characters. Also It splits the dataset into training, dev and test set to check how the model is performing
 
 This project consists of two main scripts:
 
@@ -21,7 +21,7 @@ To use the Ngram model, you will need Python 3.x and several dependencies. It is
 1. Clone the repository:
    ```bash
    git clone https://github.com/cancer32/NGramMLP.git
-   cd NGram
+   cd NGramMLP
    ```
 
 2. Install required dependencies:
